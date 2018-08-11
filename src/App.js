@@ -2,36 +2,35 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const list = [
+const items = [
   {
-    title: 'React',
-    url: 'https://facebook.github.io/react/',
-    author: 'Jordan Walke',
-    num_comments: 3,
-    points: 4,
-    objectID: 0,
+    id: 0,
+    title: 'Twitter',
+    url: 'https://twitter.com/PolarEwan',
   },
   {
-    title: 'Redux',
-    url: 'https://github.com/reactjs/redux',
-    author: 'Dan Abramov, Andrew Clark',
-    num_comments: 2,
-    points: 5,
-    objectID: 1,
+    id: 1,
+    title: 'Github',
+    url: 'https://github.com/obi-ewan',
   },
 ];
 
+function ItemList(props) {
+  const items = props.items;
+  const listItems =  items.map(item => 
+        <div key={item.id}>
+          <span><a href={item.url}>{item.title}</a></span>
+        </div>
+  );
+
+  return <ul>{listItems}</ul>
+}
+
 class App extends Component {
   render() {
-    let helloWorld = "Sup dawg";
-    let firstName ="Ewan";
-    let lastName = "Iscool";
-    const fullName = firstName + " " + lastName;
-
     return (
-      <div className="App">
-        <h2> {helloWorld} </h2>
-        <h3> {fullName}</h3>
+      <div className="App">        
+        <ItemList items={items} />
       </div>
     );
   }
