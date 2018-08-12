@@ -1,10 +1,14 @@
-body {
-  height: 100%;
-  background: linear-gradient(90deg, #ffffff 60%, #416bf4 40%);
+html {
+  min-height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(90deg, #cc32ef 1%, #416bf4 99%);
 } 
 
 #kms {
   font-family: monospace;
-  font-size: 38pt;
-  height: 30px;
+  text-align: right;
+  font-size: 50pt;
+  margin: 60pt;
+  color: #ffffff;
 }
