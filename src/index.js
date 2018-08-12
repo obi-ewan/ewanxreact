@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { App, } from './App';
-import { Bindingexample, } from './examples/bindings'
+import { Kms,  } from './components/kms';
+
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<Bindingexample />, document.getElementById('hey'));
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Kms />, document.getElementById('kms'));
+
 
 if (module.hot) {
     module.hot.accept();
