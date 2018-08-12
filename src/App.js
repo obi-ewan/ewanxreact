@@ -15,25 +15,45 @@ const items = [
   },
 ];
 
-function ItemList(props) {
-  const items = props.items;
-  const listItems =  items.map(item => 
-        <div key={item.id}>
-          <span><a href={item.url}>{item.title}</a></span>
-        </div>
-  );
-
-  return <ul>{listItems}</ul>
-}
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = { items };
+
+    this.onDismiss = this.onDismiss.bind(this);
+  }
+
+  onDismiss(id) {
+    const isNotId = item => item.id !== id;
+    const updatedList = this.state.items.filter(isNotId);
+    this.setState({ items: updatedList });
+  }
+
   render() {
     return (
-      <div className="App">        
-        <ItemList items={items} />
+      <div className="App">
+        { this.state.items.map(item =>
+          <div key={item.id}>
+
+            <span>
+              <a href={item.url}>{item.title}</a>
+            </span>
+
+            <span> 
+              <button 
+                  onClick={ console.log("lol") } type="button"> Dismiss 
+              </button>
+            </span>
+
+          </div>
+        )}
       </div>
-    );
+    )
   }
+
 }
 
-export default App;
+export { App };
