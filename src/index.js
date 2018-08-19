@@ -12,7 +12,9 @@ let gValue = 107;
 let hasHitBottomG = false;
 let hasHitTopG = false;
 
-document.onmousemove = changeColor
+//document.onmousemove = changeColor
+document.addEventListener("mousemove", changeColor)
+document.addEventListener("touchmove", changeColor)
 
 function changeColor(event) {
   if (gValue < 60 || (hasHitBottomG === true && gValue !== 245) ) { 
