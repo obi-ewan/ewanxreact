@@ -17,16 +17,16 @@ document.addEventListener("mousemove", changeColor)
 document.addEventListener("touchmove", changeColor)
 
 function changeColor(event) {
-  if (gValue < 60 || (hasHitBottomG === true && gValue !== 245) ) { 
+  if (gValue < 1 || (hasHitBottomG === true && !(gValue >= 255)) ) { 
     hasHitBottomG = true;
     hasHitTopG = false;
-    gValue++;
-  } else if (gValue === 245 || hasHitTopG === true ) {
+    gValue+=5;
+  } else if (gValue >= 255 || hasHitTopG === true ) {
     hasHitTopG = true;
     hasHitBottomG = false;
-    gValue--;
+    gValue-=5;
   } else {
-    gValue--;
+    gValue-=5;
   }
 
   let backgroundColor = "background: linear-gradient(77deg, rgb(205, 51, 239) 1%, rgb(65, :gvalue:, 244) 100%);".replace(':gvalue:', gValue);
