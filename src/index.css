@@ -2,13 +2,13 @@ html {
   min-height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background: linear-gradient(90deg, #cc32ef 1%, #416bf4 99%);
+  background: linear-gradient(77deg, #cc32ef 1%, rgb(65, 107, 244) 100%);
 } 
 
 #kms {
   font-family: monospace;
   text-align: right;
   font-size: 50pt;
-  margin: 60pt;
+  margin: 5%;
   color: #ffffff;
 }

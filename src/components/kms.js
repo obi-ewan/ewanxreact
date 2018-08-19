@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 class Kms extends Component {
   render() {
     return (
-      <div className="Kms"> kill me</div>
+      <div id="Kms"> hey friend 🦖</div>
 
     )
   }
